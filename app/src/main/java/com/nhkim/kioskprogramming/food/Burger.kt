@@ -1,6 +1,6 @@
-package com.nhkim.kioskprogramming
+package com.nhkim.kioskprogramming.food
 
-class Buger:Food() {
+class Burger: Food() {
     override fun displayInfo(){}
 
     fun addTopping():Int = 0

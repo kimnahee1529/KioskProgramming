@@ -1,5 +1,7 @@
 package com.nhkim.kioskprogramming
 
+import com.nhkim.kioskprogramming.food.Food
+
 class Kiosk {
     var input :Int? = null
     var foods :MutableList<Food> = mutableListOf<Food>()

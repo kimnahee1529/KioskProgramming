@@ -1,4 +1,4 @@
-package com.nhkim.kioskprogramming
+package com.nhkim.kioskprogramming.food
 
 open class Food {
     var name :String =""

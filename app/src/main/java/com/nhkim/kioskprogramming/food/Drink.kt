@@ -1,6 +1,6 @@
-package com.nhkim.kioskprogramming
+package com.nhkim.kioskprogramming.food
 
-class Drink:Food() {
+class Drink: Food() {
 
     var size :String =""
     override fun displayInfo(){}
