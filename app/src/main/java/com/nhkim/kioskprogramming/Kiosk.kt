@@ -38,6 +38,7 @@ class Kiosk {
     }
     fun orderMenu(){
         println("OrderMenu 생성")
+        println()
 
     }
     fun cart(){}
