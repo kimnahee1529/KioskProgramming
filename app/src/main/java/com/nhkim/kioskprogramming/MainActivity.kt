@@ -9,3 +9,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 }
+//fun main() 부분
+fun main(){
+    var kiosk = Kiosk()
+    kiosk.mainMenu()
+}
