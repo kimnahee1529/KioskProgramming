@@ -1,6 +1,6 @@
-package com.nhkim.kioskprogramming
+package com.nhkim.kioskprogramming.food
 
-class IceCream:Food() {
+class IceCream: Food() {
 
     var size :Int =0
     var flavor :String =""
