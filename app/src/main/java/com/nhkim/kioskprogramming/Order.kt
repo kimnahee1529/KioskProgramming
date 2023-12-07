@@ -1,4 +1,4 @@
-package com.example.level3
+package com.nhkim.kioskprogramming
 
 import com.nhkim.kioskprogramming.food.Beer
 import com.nhkim.kioskprogramming.food.Burger
