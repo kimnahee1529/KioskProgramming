@@ -46,6 +46,7 @@ class Order {
                     in 1..foods.size -> {
                         order.addItem(foods[userInput - 1])
                         println("${foods[userInput - 1].name}를 선택하셨습니다.")
+                        break
                     }
                     0 -> break
                     else -> println("잘못된 입력입니다. 다시 입력해주세요.")
