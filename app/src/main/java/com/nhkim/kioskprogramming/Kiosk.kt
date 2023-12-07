@@ -1,45 +1,52 @@
 package com.nhkim.kioskprogramming
 
 import com.nhkim.kioskprogramming.food.Food
+import com.nhkim.kioskprogramming.food.Menu
+import com.nhkim.kioskprogramming.food.MenuItem
 
+/*
+Kiosk
+음식의 메뉴 정보 "출력"
+장바구니에 들어갈 음식 객체 계산
+총 가격
+* */
 class Kiosk {
-    var input :Int? = null
+
     var foods :MutableList<Food> = mutableListOf<Food>()
-    fun mainMenu(){
+    var cart = mutableListOf<Food>()
+    val menu = Menu()
 
-        // 메뉴판 출력
-        val line ="""
-            "SHAKESHACK BURGER 에 오신걸 환영합니다."
-            아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.
 
-            [ SHAKESHACK MENU ]
-            1. Burgers         | 앵거스 비프 통살을 다져만든 버거
-            2. Forzen Custard  | 매장에서 신선하게 만드는 아이스크림
-            3. Drinks          | 매장에서 직접 만드는 음료
-            4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주
-            0. 종료            | 프로그램 종료
-           
-        """.trimIndent()
-        println(line)
+    fun printEntireMenu(){
+        val selectMenu = menu.entireMenu()
+        menu.selectDetailMenu(selectMenu)
+    }
 
-        //값을 입력
-        while(true) {
+    fun addCart(menuItem: MenuItem) {
+        println("위 메뉴를 장바구니에 추가하시겠습니까?\n" +
+                 "1. 확인 \t 2. 취소")
+        val input = readLine()?.toInt()
+        while(true){
             try {
-                input = readLine()?.toInt()
-                when(input){
-                    0 -> break
-                    in 1..4 -> orderMenu()
+                if(input==1) {
+                    println("${menuItem.name} 가 장바구니에 추가되었습니다")
+//                    cart.add(menuItem.)
+                    println("cart: ${cart}")
+                    println("장바구니 : ${cart.size}")
+                    break
+                } else if(input==2){
+                    println("취소하셨습니다")
+                    break
+                }else{
+                    println("1,2 둘 중 하나를 입력해주세요.")
+                    break
                 }
-                println(input)
-            } catch (e: Exception) {
-                println("숫자 이외의 값을 입력하시오")
+            }catch(e: Exception) {
+                println("올바른 값을 입력해주세요.")
             }
         }
-    }
-    fun orderMenu(){
-        println("OrderMenu 생성")
+
 
     }
-    fun cart(){}
 
 }
