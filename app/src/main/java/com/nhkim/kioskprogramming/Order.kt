@@ -12,6 +12,7 @@ class Order {
 
     private fun addItem(item: Food) {
         items.add(item)
+        println("${item.name}를 장바구니에 담았습니다.")
     }
 
     fun displayOrder() {
@@ -19,7 +20,7 @@ class Order {
         for ((index, item) in items.withIndex()) {
             println("${index + 1}. ${item.name} | W ${item.price}")
         }
-        println("Total Price: W ${calculateTotalPrice()}")
+        println("Total Price: W ${calculateTotalPrice()}만원입니다.")
     }
 
     private fun calculateTotalPrice(): Double {
@@ -41,12 +42,12 @@ class Order {
             val userInput = readLine()?.toIntOrNull()
 
             if (userInput != null) {
-                when {
-                    userInput in 1..foods.size -> {
+                when (userInput) {
+                    in 1..foods.size -> {
                         order.addItem(foods[userInput - 1])
                         println("${foods[userInput - 1].name}를 선택하셨습니다.")
                     }
-                    userInput == 0 -> break
+                    0 -> break
                     else -> println("잘못된 입력입니다. 다시 입력해주세요.")
                 }
             } else {
