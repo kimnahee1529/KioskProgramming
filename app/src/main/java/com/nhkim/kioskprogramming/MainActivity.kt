@@ -12,5 +12,5 @@ class MainActivity : AppCompatActivity() {
 //fun main() 부분
 fun main(){
     var kiosk = Kiosk()
-    kiosk.mainMenu()
+    kiosk.playApp()
 }
