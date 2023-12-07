@@ -1,11 +1,8 @@
 package com.nhkim.kioskprogramming.food
 
-class IceCream: Food() {
-
-    var size :Int =0
-    var flavor :String =""
-    override fun displayInfo(){}
-
-    fun selectSize(){}
-    fun selectFlavor(){}
+// 아이스크림을 나타내는 클래스
+class IceCream(name: String, price: Double, description : String) : Food(name, price, description) {
+    override fun displayMenu() {
+        println("$name | W $price | $description")
+    }
 }

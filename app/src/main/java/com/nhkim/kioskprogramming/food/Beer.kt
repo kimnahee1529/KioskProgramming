@@ -1,10 +1,8 @@
 package com.nhkim.kioskprogramming.food
 
-class Beer: Food() {
-    var size :Int =0
-    var type :String =""
-    override fun displayInfo(){}
-
-    fun selectSize(){}
-    fun selectType(){}
+// 맥주를 나타내는 클래스
+class Beer(name: String, price: Double, description: String) : Food(name, price, description) {
+    override fun displayMenu() {
+        println("$name | W $price | $description")
+    }
 }

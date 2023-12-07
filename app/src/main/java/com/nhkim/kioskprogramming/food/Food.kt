@@ -1,8 +1,8 @@
 package com.nhkim.kioskprogramming.food
 
-open class Food {
-    var name :String =""
-    var price :Int =0
-
-    open fun displayInfo(){}
+// 메뉴 항목을 나타내는 추상 클래스
+open class Food(val name: String, val price: Double, val description: String) {
+    open fun displayMenu() {
+        println("$name | W $price | $description")
+    }
 }
