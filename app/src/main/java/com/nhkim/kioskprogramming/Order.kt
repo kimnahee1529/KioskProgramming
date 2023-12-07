@@ -10,7 +10,7 @@ import com.nhkim.kioskprogramming.food.IceCream
 class Order {
     private val items = mutableListOf<Food>()
 
-    fun addItem(item: Food) {
+    private fun addItem(item: Food) {
         items.add(item)
     }
 
