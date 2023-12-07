@@ -6,6 +6,6 @@ open class Food(name :String,detail :String,price:Double) {
     var price :Double = price
 
     open fun displayInfo(){
-        println(this.name +" | ${this.price} | " + this.detail)
+        println(this.name +" | W ${this.price} | " + this.detail)
     }
 }
