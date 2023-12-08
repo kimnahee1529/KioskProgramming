@@ -58,19 +58,35 @@ class Menu {
         """.trimIndent()
 
         //값을 입력
+//        while(true) {
+//            try {
+//                println(line)
+//                //만약 foods에 값이 있다면 order menu 출력
+//
+//                input = readLine()?.toInt()
+//                when(input){
+//                    0 -> break
+//                    in 1..4 -> orderMenu(input!!)
+//                }
+//                println(input)
+//            } catch (e: Exception) {
+//                println("잘못된 번호를 입력했어요 다시 입력해주세요.")
+//            }
+//        }
         while(true) {
+            println(line)
             try {
-                println(line)
-                //만약 foods에 값이 있다면 order menu 출력
-
-                input = readLine()?.toInt()
+                val input = readLine()?.toInt()
                 when(input){
-                    0 -> break
+                    0 -> {
+                        println("찾아주셔서 감사합니다. 프로그램이 종료됩니다.")
+                        break
+                    }
                     in 1..4 -> orderMenu(input!!)
+                    else -> println("잘못된 번호를 입력했어요. 다시 입력해주세요.\n")
                 }
-                println(input)
             } catch (e: Exception) {
-                println("잘못된 번호를 입력했어요 다시 입력해주세요.")
+                println("숫자를 입력해주세요.\n")
             }
         }
 
