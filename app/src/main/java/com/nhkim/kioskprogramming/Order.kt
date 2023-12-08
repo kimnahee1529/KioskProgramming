@@ -33,7 +33,7 @@ class Order {
 
             foods.forEachIndexed { index, item ->
                 print("${index + 1}. ")
-                item.displayMenu()
+                item.displayInfo()
             }
 
             println("0. 뒤로가기")
