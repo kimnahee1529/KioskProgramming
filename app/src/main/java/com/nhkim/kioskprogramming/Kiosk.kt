@@ -1,7 +1,7 @@
 package com.nhkim.kioskprogramming
 
 import com.nhkim.kioskprogramming.food.*
-
+import com.nhkim.kioskprogramming.food.Food
 
 /**
  *  키오스크 :계산 업무
@@ -17,7 +17,6 @@ import com.nhkim.kioskprogramming.food.*
  *  - 이래야 나중에 계산할때 메뉴를 참고해서 하지 않을까
  *
  */
-
 
 class Kiosk {
 
