@@ -88,10 +88,15 @@ class Menu {
 
         //입력부분
         while(true){
-            input = readLine()?.toInt()
-            when(input){
-                0 -> break
+            try {
+                input = readLine()?.toInt()
+                when (input) {
+                    0 -> break
+                }
+            } catch (e: Exception) {
+                println("잘못된 번호를 입력했어요 다시 입력해주세요.")
             }
+
         }
 
         //주문 하시겠습니까?
