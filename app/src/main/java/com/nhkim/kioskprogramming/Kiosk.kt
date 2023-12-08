@@ -1,45 +1,35 @@
 package com.nhkim.kioskprogramming
 
+import com.nhkim.kioskprogramming.food.*
 import com.nhkim.kioskprogramming.food.Food
 
+/**
+ *  키오스크 :계산 업무
+ *  - 장바구니에 어떤 Food 가 들어와 있는지,
+ *  - 현재 결제해야 하는 총 가격 들을 계산
+ *  - 계산적인 부분
+ *
+ *  메뉴 :출력 업무
+ *  - 입력값을 받고, 거기에 해당되는 콘솔창 출력부분
+ *
+ *
+ *  그렇다면 키오스크 클래스 안에 메뉴를 넣어서 처리?
+ *  - 이래야 나중에 계산할때 메뉴를 참고해서 하지 않을까
+ *
+ */
+
 class Kiosk {
-    var input :Int? = null
-    var foods :MutableList<Food> = mutableListOf<Food>()
-    fun mainMenu(){
 
-        // 메뉴판 출력
-        val line ="""
-            "SHAKESHACK BURGER 에 오신걸 환영합니다."
-            아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.
+    var menu = Menu() // menu 클래스 를 만들어 입출력을 다룬다.
+    var foods = mutableListOf<Food>() // 장바구니 정보
 
-            [ SHAKESHACK MENU ]
-            1. Burgers         | 앵거스 비프 통살을 다져만든 버거
-            2. Forzen Custard  | 매장에서 신선하게 만드는 아이스크림
-            3. Drinks          | 매장에서 직접 만드는 음료
-            4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주
-            0. 종료            | 프로그램 종료
-           
-        """.trimIndent()
-        println(line)
 
-        //값을 입력
-        while(true) {
-            try {
-                input = readLine()?.toInt()
-                when(input){
-                    0 -> break
-                    in 1..4 -> orderMenu()
-                }
-                println(input)
-            } catch (e: Exception) {
-                println("숫자 이외의 값을 입력하시오")
-            }
-        }
+    fun playApp(){
+        menu.initMenu() //메뉴판 초기화
+        menu.mainMenu() //메인 메뉴 출력
     }
-    fun orderMenu(){
-        println("OrderMenu 생성")
 
-    }
     fun cart(){}
 
 }
+
